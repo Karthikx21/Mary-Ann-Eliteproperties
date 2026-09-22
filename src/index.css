@@ -1,0 +1,499 @@
+/* ==========================================================================
+   MARY ANN ELITEPROPERTIES — LUXURY REAL ESTATE DESIGN SYSTEM
+   Theme: Ultra-Luxury Architectural Real Estate — Royal Champagne Gold,
+   Warm Alabaster Silk & Deep Obsidian Palette.
+   ========================================================================== */
+
+:root {
+  /* Surface & Backgrounds */
+  --bg-main: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-dark: #0F172A;
+  --bg-dark-surface: #1E293B;
+
+  /* Text Colors */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-inverse: #FFFFFF;
+  --text-inverse-muted: #CBD5E1;
+
+  /* Borders */
+  --border-light: #E2E8F0;
+  --border-subtle: #F1F5F9;
+  --border-dark: #334155;
+
+  /* Ultra-Premium Luxury Brand Color Palette */
+  --accent-gold: #C5A880;          /* Refined Royal Champagne Gold */
+  --accent-gold-bright: #D8B88C;   /* Bright Champagne Gold */
+  --accent-gold-dark: #967444;     /* Deep Antique Gold */
+  --accent-gold-deep: #785B30;     /* Rich Bronze Gold */
+  --bg-gold-subtle: #FAF8F5;       /* Warm Alabaster Silk */
+  --bg-gold-tint: #F3ECE0;         /* Soft Linen Gold */
+  --border-gold: #E8DFD0;          /* Hairline Gold Border */
+  --gold-glow: rgba(197, 168, 128, 0.25);
+
+  /* Compatibility mappings ensuring complete harmony */
+  --accent-lime: var(--accent-gold);
+  --accent-lime-bright: var(--accent-gold-bright);
+  --accent-lime-dark: var(--accent-gold-dark);
+  --accent-lime-deep: var(--accent-gold-deep);
+  --bg-lime-subtle: var(--bg-gold-subtle);
+  --bg-lime-tint: var(--bg-gold-tint);
+  --border-lime: var(--border-gold);
+  --lime-glow: var(--gold-glow);
+
+  --accent-navy: #0F172A;
+  --whatsapp-green: #25D366;
+
+  /* Backwards Compatibility Aliases */
+  --bg-warm: #FAF8F5;
+  --bg-surface: #F8FAFC;
+  --bg-charcoal: #0F172A;
+  --text-charcoal: #0F172A;
+  --border-hairline: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --brand-eucalyptus: #967444;
+  --brand-stone-dark: #475569;
+  --border-inverse-strong: rgba(255, 255, 255, 0.2);
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-ui: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-serif-body: 'DM Serif Display', Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --container-max: 1280px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Containers & Grids
+   ========================================================================== */
+.allys-container,
+.editorial-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3.5vw, 2.5rem);
+  padding-right: clamp(1rem, 3.5vw, 2.5rem);
+}
+
+.allys-container-narrow,
+.editorial-container-narrow {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3.5vw, 2.5rem);
+  padding-right: clamp(1rem, 3.5vw, 2.5rem);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+/* ==========================================================================
+   Clean Typographic Kickers (NO ROUNDED BOXES OVER TEXT)
+   ========================================================================== */
+.allys-badge,
+.badge-tag,
+.editorial-kicker,
+.text-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-lime-dark);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 0.5rem;
+  box-shadow: none !important;
+}
+
+.allys-badge-dark,
+.text-kicker-dark {
+  color: var(--accent-lime-bright) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Buttons with Lime Accents
+   ========================================================================== */
+.allys-btn,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.allys-btn-primary,
+.btn-primary {
+  background-color: var(--accent-navy);
+  color: #FFFFFF !important;
+  border-color: var(--accent-navy);
+}
+
+.allys-btn-primary:hover,
+.btn-primary:hover {
+  background-color: #1E293B;
+  border-color: var(--accent-lime);
+  color: var(--accent-lime-bright) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--lime-glow);
+}
+
+.allys-btn-luxury,
+.allys-btn-gold,
+.allys-btn-lime {
+  background: linear-gradient(135deg, #C5A880 0%, #B39162 100%);
+  color: #0F172A !important;
+  border-color: #B39162;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 10px rgba(197, 168, 128, 0.28);
+}
+
+.allys-btn-luxury:hover,
+.allys-btn-gold:hover,
+.allys-btn-lime:hover {
+  background: linear-gradient(135deg, #D4B68E 0%, #C5A06F 100%);
+  border-color: #C5A06F;
+  color: #0A0D14 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(197, 168, 128, 0.4);
+}
+
+.allys-btn-outline,
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-primary) !important;
+  border-color: var(--border-light);
+}
+
+.allys-btn-outline:hover,
+.btn-secondary:hover {
+  background-color: var(--bg-lime-subtle);
+  border-color: var(--accent-lime);
+  color: var(--accent-lime-deep) !important;
+  transform: translateY(-1px);
+}
+
+.allys-btn-white {
+  background-color: #FFFFFF;
+  color: var(--text-primary) !important;
+  border-color: #FFFFFF;
+}
+
+.allys-btn-white:hover {
+  background-color: #F8FAFC;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  color: var(--accent-lime-deep) !important;
+}
+
+.btn-inverse {
+  background-color: #FFFFFF;
+  color: var(--text-primary) !important;
+  border-color: #FFFFFF;
+}
+
+.btn-inverse:hover {
+  background-color: var(--bg-lime-subtle);
+  transform: translateY(-1px);
+}
+
+/* Social Media Icon Buttons */
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94A3B8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  background-color: var(--accent-lime);
+  color: #0F172A;
+  border-color: var(--accent-lime);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--lime-glow);
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+.allys-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.allys-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-lime);
+}
+
+.architectural-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-subtle);
+}
+
+.architectural-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Form Controls
+   ========================================================================== */
+.allys-input,
+.allys-select,
+.allys-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.allys-input:focus,
+.allys-select:focus,
+.allys-textarea:focus {
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 0 3px var(--lime-glow);
+}
+
+.allys-input::placeholder,
+.allys-textarea::placeholder {
+  color: var(--text-light);
+}
+
+.allys-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   Modals
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-sheet {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Upgraded Animations & Motion Classes
+   ========================================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseLime {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(132, 204, 22, 0);
+  }
+}
+
+.motion-fade-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-lime);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .desktop-nav, .desktop-actions {
+    display: none !important;
+  }
+  .mobile-hamburger {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-12 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .modal-sheet {
+    max-height: 95vh;
+    border-radius: var(--radius-lg);
+  }
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Core Pages -->
+  <url>
+    <loc>https://maryanneliteproperties.com/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/hero-star-luxoria.jpg</image:loc>
+      <image:title>Mary Ann Elite Properties - Star Luxoria Vilangudi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/what-we-offer</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/about</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/managing-director.png</image:loc>
+      <image:title>Managing Director - Mary Ann Elite Properties</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/advisors</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/contact</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Individual Project Pages -->
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/star-luxoria-vilangudi</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/hero-star-luxoria.jpg</image:loc>
+      <image:title>Star Luxoria - Vilangudi Madurai DTCP Approved Villa Plots</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/star-luxor-parapathi</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/hero-luxury-estate.jpg</image:loc>
+      <image:title>Star Luxor - Parapathi Madurai Airport Corridor Plots</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/vibul-avenue-alagarkovil</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/hero-luxury-avenue.jpg</image:loc>
+      <image:title>Vibul Avenue - Alagar Kovil Hill View Plots Madurai</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/guru-nagar-kunnathur</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/meenakshi-nagar-naattarmangalam</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/meenatchi-garden-poonjuthi</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://maryanneliteproperties.com/images/hero-luxury-villas.jpg</image:loc>
+      <image:title>Meenatchi Garden - Poonjuthi 40-Acre Plotted Community</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/vaigai-enclave-melapanagadi</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/jay-square-thirumanjolai</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://maryanneliteproperties.com/properties/ananthajith-paravai</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>
