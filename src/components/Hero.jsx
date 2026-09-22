@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, ArrowRight } from 'lucide-react';
 import { PROJECTS } from '../data/projectsData';
 
 export default function Hero({ onSelectProject, onOpenSiteVisit }) {
@@ -43,14 +43,6 @@ export default function Hero({ onSelectProject, onOpenSiteVisit }) {
   }, [isPaused, slides.length]);
 
   const active = slides[currentSlide];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   return (
     <section
@@ -163,7 +155,6 @@ export default function Hero({ onSelectProject, onOpenSiteVisit }) {
               }}
             >
               {active.project.name}
-              <span className="sr-only"> — DTCP & RERA Approved Plots & Villas in Madurai</span>
             </h1>
 
             <p
@@ -230,102 +221,7 @@ export default function Hero({ onSelectProject, onOpenSiteVisit }) {
             </button>
           </div>
         </div>
-
-        {/* Carousel Arrow Controls */}
-        <button
-          onClick={prevSlide}
-          aria-label="Previous property"
-          style={{
-            position: 'absolute',
-            left: '1.5rem',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '46px',
-            height: '46px',
-            borderRadius: '50%',
-            backgroundColor: 'rgba(15, 23, 42, 0.65)',
-            backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            color: '#FFFFFF',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            zIndex: 20,
-            transition: 'all 0.2s ease'
-          }}
-          className="carousel-nav-btn"
-        >
-          <ChevronLeft size={22} />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          aria-label="Next property"
-          style={{
-            position: 'absolute',
-            right: '1.5rem',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '46px',
-            height: '46px',
-            borderRadius: '50%',
-            backgroundColor: 'rgba(15, 23, 42, 0.65)',
-            backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            color: '#FFFFFF',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            zIndex: 20,
-            transition: 'all 0.2s ease'
-          }}
-          className="carousel-nav-btn"
-        >
-          <ChevronRight size={22} />
-        </button>
-
-        {/* Slide Progress Indicators */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '1.25rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.65rem',
-            zIndex: 20
-          }}
-        >
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentSlide(idx)}
-              aria-label={`Go to slide ${idx + 1}`}
-              style={{
-                width: idx === currentSlide ? '36px' : '10px',
-                height: '5px',
-                borderRadius: '4px',
-                backgroundColor: idx === currentSlide ? '#C5A880' : 'rgba(255, 255, 255, 0.35)',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-            />
-          ))}
-        </div>
       </div>
-
-      <style>{`
-        .carousel-nav-btn:hover {
-          background-color: #C5A880 !important;
-          color: #0F172A !important;
-          border-color: #C5A880 !important;
-          transform: translateY(-50%) scale(1.08) !important;
-        }
-      `}</style>
     </section>
   );
 }
